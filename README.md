@@ -140,3 +140,103 @@ paste("3d: rata-rata = ", rata, ", varian = ", rata) #3d
 ```
 varian = lambda | rata rata = lambda 
 maka nilai nya sama sama 6
+
+
+### Nomor 4
+#### 4a
+Fungsi Probabilitas dari Distribusi Chi-Square.
+```r
+#4a
+x <- 2
+v <- 10
+#build in function chi square distribution
+dchisq(x, v)
+```
+dengan function tersebut diperoleh 
+
+![image](https://user-images.githubusercontent.com/82019030/162620089-53eaf634-b8ff-478e-8d7d-544cde80693b.png)
+
+#### 4b
+Histogram dari Distribusi Chi-Square dengan 100 data random.
+```r
+#membuat histogram chi square dengan 100 data random
+set.seed(1)
+hist(rchisq(100, v)) #4b
+```
+Histogram:
+
+![image](https://user-images.githubusercontent.com/82019030/162620133-a043e0fa-1e96-430b-800c-984e12c7f83d.png)
+
+#### 4c
+Nilai Rataan (μ) dan Varian (σ²) dari DistribusiChi-Square.
+```r
+#menggunakan rumus chi square rata rata dan varian 
+paste("4c: rata-rata = ", v, ", varian = ", 2*v) #4c
+```
+maka diperoleh data sebagai berikut
+
+![image](https://user-images.githubusercontent.com/82019030/162620163-3d3b5b20-1c06-406c-84ef-e288f8ca54d1.png)
+
+### Nomor 5
+#### 5a
+Fungsi Probabilitas dari Distribusi Exponensial
+```r
+set.seed(1)
+#5a
+lamb <- 3
+dexp(lamb) #build in function eksponensial
+```
+Maka probabilitas nya 
+
+![image](https://user-images.githubusercontent.com/82019030/162620330-ba42c6c1-1857-4261-a40b-669e6106a299.png)
+
+#### 5b
+Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+```r
+#5b membuat histogram untuk 10 , 100, 1000, dan 10000 bilangan random
+set.seed(3)
+hist(rexp(10))
+set.seed(3)
+hist(rexp(100))
+set.seed(3)
+hist(rexp(1000))
+set.seed(3)
+hist(rexp(10000))
+```
+untuk data = 10
+
+![image](https://user-images.githubusercontent.com/82019030/162620421-f87af696-b178-4d2a-bc87-ed73a9cccb72.png)
+
+untuk data = 100
+
+![image](https://user-images.githubusercontent.com/82019030/162620426-2eec77a6-507d-4f13-98db-1610371299aa.png)
+
+untuk data = 1000
+
+![image](https://user-images.githubusercontent.com/82019030/162620443-ce7ed9c3-9cfc-4cbc-abd5-523ed0a31828.png)
+
+untuk data = 10000
+
+![image](https://user-images.githubusercontent.com/82019030/162620453-0600e388-5bd8-4e96-8516-40b9aa554ed6.png)
+
+#### 5c
+Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+```r
+#5c
+#rumus rata rata eksponensial
+rataan <- function(lamb){
+  return (1/lamb)
+}
+rataan(lamb) 
+#rumus varian eksponensial
+varian <- function(lamb){
+  return (1/(lamb*lamb))
+}
+varian(lamb) 
+paste("5c: rata-rata = ", rataan(lamb), ", varian = ", varian(lamb)) #5c
+```
+maka diperoleh
+
+![image](https://user-images.githubusercontent.com/82019030/162620502-92220092-60e2-4129-8985-4340f3cab500.png)
+
+
