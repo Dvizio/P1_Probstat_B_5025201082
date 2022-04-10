@@ -61,3 +61,82 @@ paste("1e: rata-rata = ", rataan(p), ", varian = ", varian(p)) #1e
 maka hasil yang didapat 
 
 ![image](https://user-images.githubusercontent.com/82019030/162619123-74d35845-886a-4018-8ee5-97e215348515.png)
+
+
+### Nomor 2
+#### 2a
+Peluang terdapat 4 pasien yang sembuh.
+```r
+p <- 0.2 #peluang sembuh
+x <- 4 
+n <- 20 #jumlah pasien
+
+dbinom(x,n,p) #2a
+```
+maka diperoleh
+
+![image](https://user-images.githubusercontent.com/82019030/162619633-771333c7-dfff-45a2-9f35-4c3dfa3fd7c6.png)
+
+#### 2b
+Gambarkan grafik histogram berdasarkan kasus tersebut
+```r
+#membuat histogram dengan fungsi
+hist(dbinom(0:10,n,p)) #2b
+```
+Maka diperoleh histogram sebagai berikut
+
+![image](https://user-images.githubusercontent.com/82019030/162619676-26051d52-316f-4233-a0aa-781d17575d3c.png)
+
+#### 2c
+Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial
+```r
+rataan <- function(p) {
+  return (1/p)
+}
+
+varian <- function(p) {
+  return ((1-p)/p*p)
+}
+
+paste("2c: rata-rata = ", rataan(p), ", varian = ", varian(p)) #2c
+```
+
+![image](https://user-images.githubusercontent.com/82019030/162619713-5018f4df-2b58-4443-b343-a3fcb4055ebd.png)
+
+### Nomor 3
+#### 3a
+Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+```r
+#3a
+x <- 6 #6 bayi akan lahir
+avge <- 4.5 #rata rata
+#built in function poisson distribution
+dpois(x,avge)
+```
+maka peluangnya
+
+![image](https://user-images.githubusercontent.com/82019030/162619768-d7fd89ae-a5f9-498e-aabf-be57a8adf1d7.png)
+
+#### 3b
+simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama
+setahun (n = 365)
+```r
+set.seed(1)
+hist(rpois(365, avge)) #3b
+```
+Histogram : 
+
+![image](https://user-images.githubusercontent.com/82019030/162619822-e68f9322-2dd9-4ddc-a6fc-2703dccc767b.png)
+
+#### 3c
+dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+Kesimpulan : data random yang didapatkan pada poin b cukup mendekati poin a
+
+#### 3d
+Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
+```r
+rata <- 6
+paste("3d: rata-rata = ", rata, ", varian = ", rata) #3d
+```
+varian = lambda | rata rata = lambda 
+maka nilai nya sama sama 6
