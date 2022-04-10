@@ -2,7 +2,7 @@
 set.seed(1)
 #5a
 lamb <- 3
-rexp(lamb) #build in function eksponensial
+dexp(lamb) #build in function eksponensial
 
 #5b membuat histogram untuk 10 , 100, 1000, dan 10000 bilangan random
 set.seed(3)
