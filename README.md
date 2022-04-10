@@ -239,4 +239,43 @@ maka diperoleh
 
 ![image](https://user-images.githubusercontent.com/82019030/162620502-92220092-60e2-4129-8985-4340f3cab500.png)
 
+### Nomor 6
+#### 6a
+Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot
+data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).
+```r
+#6a
+set.seed(1)
+standev <- 8 #standar deviasi
+x <- rnorm(100, 50, standev) #100 variabel acak dengan median 50
+
+plot(x)
+```
+
+![image](https://user-images.githubusercontent.com/82019030/162620769-59820aae-a154-4f02-904c-38a2dd514460.png)
+
+#### 6b
+Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan:
+NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
+```r
+#6a
+set.seed(1)
+standev <- 8 #standar deviasi
+x <- rnorm(100, 50, standev) #100 variabel acak dengan median 50
+
+plot(x)
+```
+maka histogram akan menjadi
+
+![image](https://user-images.githubusercontent.com/82019030/162620920-11e1cff5-3812-4077-858c-65b3a18fe9a1.png)
+
+#### 6c
+Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal
+```r
+#6c = Mencari Nilai Varian
+paste("nilai varian= ", standev^2)
+```
+Maka variannya adalah:
+
+![image](https://user-images.githubusercontent.com/82019030/162620964-cd92ef62-b704-46b4-bdcc-fc5fdbde5119.png)
 
