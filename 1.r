@@ -19,4 +19,4 @@ varian <- function(p) {
 
 
 hist(rgeom(n, prob = p), main = 'Histogram Geometrik') #1d
-paste("1e: rata-rata = ", rataan(p), ", varian = ", varian(p)) #1b
+paste("1e: rata-rata = ", rataan(p), ", varian = ", varian(p)) #1e
